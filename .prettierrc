@@ -15,7 +15,7 @@
 		},
 		{
 			"files": "*.{cmp,page,component}",
-			"options": { "parser": "html", "tabWidth": 2 }
+			"options": { "parser": "html", "tabWidth": 2, "xmlWhitespaceSensitivity": "ignore" }
 		},
 		{
 			"files": "**/*.{cls,trigger,apex}",
@@ -23,7 +23,7 @@
 		},
 		{
 			"files": "*.json",
-			"options": { "useTabs": true, "tabWidth": 2 }
+			"options": { "useTabs": true, "tabWidth": 2, "printWidth": 80 }
 		},
 		{
 			"files": ["docs/*.html", "doc-assets/*.html"],
@@ -41,5 +41,7 @@
 			"files": "*.xml",
 			"options": { "parser": "xml", "xmlWhitespaceSensitivity": "ignore", "tabWidth": 2, "xmlSelfClosingSpace": true }
 		}
-	]
+	],
+	"plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
+	"$schema": "https://json.schemastore.org/prettierrc"
 }

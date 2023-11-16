@@ -9,7 +9,6 @@ updates:
     directory: '/' # Location of package manifests
     commit-message:
       prefix: 'build'
-      include: 'scope'
     rebase-strategy: 'auto'
     schedule:
       interval: 'daily'
@@ -17,7 +16,6 @@ updates:
     directory: '/' # Location of package manifests
     commit-message:
       prefix: 'ci'
-      include: 'scope'
     rebase-strategy: 'auto'
     schedule:
       interval: 'daily'

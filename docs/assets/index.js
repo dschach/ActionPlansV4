@@ -34,16 +34,17 @@ window.onbeforeunload = () => {
 function initHighlightJs() {
 	apexJsSelectors.forEach((selector) => {
 		document.querySelectorAll(selector).forEach(block => {
-			//hljs.highlightElement(block);
 			block.classList.add("language-apex");
 		});
 	});
+	// Alow language auto-detection in "pre code" blocks
 	apexJsSelectors.push("pre code");
 	// initialize highlighting for code examples and
 	// signatures for methods, classes, props and enums
+	// Highlight.js now contains multiple languages to aid in
+	// code highlighting for the HTML pages in documentation
+	// (BasH, CSS, JSON, YAML, Markdown, HTML/Visualforce, JavaScript, Plain Text)
 	hljs.configure({
-		//ignoreUnescapedHTML: true,
-		//languages: ["xml", "apex"],
 		cssSelector: apexJsSelectors
 	});
 	hljs.highlightAll();
